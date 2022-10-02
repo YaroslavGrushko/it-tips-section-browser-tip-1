@@ -1,0 +1,27 @@
+<h1>Перевіряємо речення</h1>
+
+<a href="./index.html">На головну</a>
+<br><br>
+
+<label for="sentence">Напишіть, будь-ласка, речення в якому присутнє слово "Сонце":</label>
+<br><br>
+
+<textarea id="sentence" name="sentence" rows="4" cols="50">
+</textarea>
+<br><br>
+
+<button onClick={validate()}>Перевірити речення</button>
+<br><br>
+
+<input type="text" id="validationResult" size="10">
+
+<script>
+const validate = () => {
+	const sentence = document.getElementById('sentence').value;
+	const word = 'сонце';
+	const result = validateSentence(sentence, word);
+
+	document.getElementById('validationResult').value = result;
+}
+</script>
+<script type="text/javascript" src="./js/services.js"></script>
